@@ -1,0 +1,49 @@
+<div class="contenedor">
+  
+  <div class="contenido">
+    <mat-form-field class="form-field">
+      <mat-label>Search</mat-label>
+      <input matInput type="text" [(ngModel)]="foodFilter" [(ngModel)]="value" required>
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addNewFood()">Add new food</button>
+
+    <form *ngIf='mostrar' #form01 = 'ngForm' (ngSubmit) = 'newFood(foodName, foodCalories)'>
+      <button mat-button (click)="closeForm01()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-form-field>
+        <mat-label>Food name</mat-label>
+        <input type="text" matInput #foodName required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Calories</mat-label>
+        <input type="number" matInput #foodCalories required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" #saveFood>Enviar</button>
+    </form>
+
+    <mat-card class="foodlist" *ngFor="let food of foods | filter : 'name' : foodFilter">
+      <mat-card-header>
+        <mat-card-title>{{food.name}}</mat-card-title>
+        <mat-card-subtitle>Calories: {{food.calories}} </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{food.image}}">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="add(food.calories, food.name, units)">ADD</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="menu">
+    <mat-card class="caloriesCard">
+      <mat-card-title class="title">Total: {{totalCalories}} calories</mat-card-title>
+      <mat-card-subtitle *ngFor="let menu of menuDiario">
+        {{menu.name}} x {{menu.units}}: {{menu.calories * menu.units}}
+      </mat-card-subtitle>
+    </mat-card>
+  </div>
+
+</div>

@@ -1,0 +1,52 @@
+.contenedor{
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  display: flex;
+  .contenido{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .form-field {
+      width: 250px;
+    }
+    button{
+      width: 20%;
+      margin: 2%;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1%;
+    }
+    .foodlist{
+      border: solid lightgray 2px;
+      width: 50%;
+      margin: 1%;
+      button:hover {
+        background-color: #3e8e41
+      }
+      button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+      }
+      }
+    }
+    .menu{
+      width: 40%;
+      height: auto;
+      .caloriesCard{
+        position: fixed;
+      }
+      .title{
+        border-bottom: solid lightgray 2px;
+      }
+    }
+  }
+
+
