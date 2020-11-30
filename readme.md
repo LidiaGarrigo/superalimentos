@@ -1,64 +1,27 @@
-# SuperAlimentos
+# Proyecto
 
-## Introducción
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
-Vamos a construir esta aplicación que nos de consejos de nutrición:
+## Development server
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_0e106e84e22155f1d2775e37cd4aa865.gif)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Instrucciones de entrega
+## Code scaffolding
 
-    Crea un repositorio github, asigna una gh-page y envía la dirección por slack en el canal #ejercicios. 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Desarrollo
+## Build
 
-### Iteración 0 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-- Crea una aplicación con el nombre __`superalimentos`__, que no tenga ni enrutamiento ni ficheros de test (`--skipTests=true`)
-- Crea un componente que tenga el nombre __`food-list`__. 
+## Running unit tests
 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Iteración 1 | Muestra los alimentos
+## Running end-to-end tests
 
-El componente `app-food-list`  mostrará una lista de alimentos. Que deben incluir una imagen, un nombre y el contenido en calorías.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-El array con los alimentos se encuentra en el fichero food.ts
+## Further help
 
-### Iteración 2 | Buscar alimentos
-
-Crea un input box para buscar alimentos por el nombre.
-
-Necesitarás el *pipe* customizado que hemos hecho.
-
-### Iteración 3 | Añadir nuevos alimentos
-
-Crea un botón para añadir nuevos alimentos.
-
-Cuando un usuario clique el botón aparecerá un nuevo formulario con campos para nombre, número de calorías y subir una imagen.
-
-Cuando el usuario clique el botón de enviar, el alimento se añadirá a la lista.
-
-El formulario desaparece cuando el usuario clica al botón enviar.
-
-### Iteración 4 | Menú diario
-
-Crea un botón al lado de cada alimento. Cuando el usuario clique el botón, el alimento correspondiente se añadirá a la lista del ménu diario.
-
-Muestra en la página el menú diario con el total de calorías.
-
-### Bonus | Cantidades
-
-Además del botón "Añadir al menú", crea un input para la __cantidad__. Cuando un usuario entre un número en el input, se debería añadir la cantidad a la lista de ítems.
-
-El valor por defecto de cantidad será 1.
-
-**Super Bonus**
-
-Si el usuario ha añadido más de un elemento del mismo tipo a la lista, no lo muestres dos veces. En su lugar, muestra el número de elementos y el número de veces que se ha añadido.
-
-Por ejemplo:
-
-- `Banana x2`
-- `Salmon x5`
-- `Cake`
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
