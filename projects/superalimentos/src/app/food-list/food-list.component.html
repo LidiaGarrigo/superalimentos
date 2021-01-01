@@ -2,13 +2,13 @@
   
   <div class="contenido">
     <mat-form-field class="form-field">
-      <mat-label>Search</mat-label>
+      <mat-label >Search food</mat-label>
       <input matInput type="text" [(ngModel)]="foodFilter" [(ngModel)]="value" required>
       <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="addNewFood()">Add new food</button>
+    <button mat-raised-button class="addfood" color="primary" (click)="addNewFood()">Add new food</button>
 
     <form *ngIf='mostrar' #form01 = 'ngForm' (ngSubmit) = 'newFood(foodName, foodCalories)'>
       <button mat-button (click)="closeForm01()">

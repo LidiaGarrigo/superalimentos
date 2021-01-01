@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodListComponent implements OnInit {
 
-  value = 'Search food';
+  value = '';
   // tslint:disable-next-line: ban-types
   foods: Object[] = [
     {
